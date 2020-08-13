@@ -22,7 +22,7 @@
     "semver": "^6.2.0"
   },
   "files": [
-    "build/src/*.{js}",
+    "build/src/*.js",
     "LICENSE"
   ]
 }
