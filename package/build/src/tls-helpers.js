@@ -17,17 +17,9 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDefaultRootsData = exports.CIPHER_SUITES = void 0;
-const fs = require("fs");
-exports.CIPHER_SUITES = process.env.GRPC_SSL_CIPHER_SUITES;
-const DEFAULT_ROOTS_FILE_PATH = process.env.GRPC_DEFAULT_SSL_ROOTS_FILE_PATH;
+exports.CIPHER_SUITES = undefined;
 let defaultRootsData = null;
 function getDefaultRootsData() {
-    if (DEFAULT_ROOTS_FILE_PATH) {
-        if (defaultRootsData === null) {
-            defaultRootsData = fs.readFileSync(DEFAULT_ROOTS_FILE_PATH);
-        }
-        return defaultRootsData;
-    }
     return null;
 }
 exports.getDefaultRootsData = getDefaultRootsData;

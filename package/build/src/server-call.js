@@ -269,21 +269,31 @@ class Http2ServerCallStream extends events_1.EventEmitter {
             const stream = this.stream;
             const chunks = [];
             let totalLength = 0;
+
+            let errored = false
+            const sizeLimitCheck() => {
+                if (errored) return true
+                if (this.maxReceiveMessageSize !== -1 && totalLength > this.maxReceiveMessageSize) {
+                    this.sendError({
+                        code: constants_1.Status.RESOURCE_EXHAUSTED,
+                        details: `Received message larger than max (${totalLength} vs. ${this.maxReceiveMessageSize})`,
+                    });
+                    resolve();
+                    errored = true;
+                    return true
+                }
+                return false
+            }
+
             stream.on('data', (data) => {
-                chunks.push(data);
                 totalLength += data.byteLength;
+                if (sizeLimitCheck()) return
+                chunks.push(data);
             });
             stream.once('end', async () => {
+                if (sizeLimitCheck()) return
                 try {
                     const requestBytes = Buffer.concat(chunks, totalLength);
-                    if (this.maxReceiveMessageSize !== -1 &&
-                        requestBytes.length > this.maxReceiveMessageSize) {
-                        this.sendError({
-                            code: constants_1.Status.RESOURCE_EXHAUSTED,
-                            details: `Received message larger than max (${requestBytes.length} vs. ${this.maxReceiveMessageSize})`,
-                        });
-                        resolve();
-                    }
                     resolve(this.deserializeMessage(requestBytes));
                 }
                 catch (err) {
