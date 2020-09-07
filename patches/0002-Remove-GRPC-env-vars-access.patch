@@ -1,0 +1,40 @@
+From 12e4e94755557a1e961bd727e1079c35e51f2ad6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=D0=A1=D0=BA=D0=BE=D0=B2=D0=BE=D1=80=D0=BE=D0=B4=D0=B0=20?=
+ =?UTF-8?q?=D0=9D=D0=B8=D0=BA=D0=B8=D1=82=D0=B0=20=D0=90=D0=BD=D0=B4=D1=80?=
+ =?UTF-8?q?=D0=B5=D0=B5=D0=B2=D0=B8=D1=87?= <chalkerx@gmail.com>
+Date: Tue, 8 Sep 2020 00:08:43 +0300
+Subject: [PATCH 2/2] Remove GRPC env vars access
+
+---
+ build/src/tls-helpers.js | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+
+diff --git a/build/src/tls-helpers.js b/build/src/tls-helpers.js
+index d118344..b6f2d87 100755
+--- a/build/src/tls-helpers.js
++++ b/build/src/tls-helpers.js
+@@ -17,18 +17,10 @@
+  */
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.getDefaultRootsData = exports.CIPHER_SUITES = void 0;
+-const fs = require("fs");
+-exports.CIPHER_SUITES = process.env.GRPC_SSL_CIPHER_SUITES;
+-const DEFAULT_ROOTS_FILE_PATH = process.env.GRPC_DEFAULT_SSL_ROOTS_FILE_PATH;
++exports.CIPHER_SUITES = undefined;
+ let defaultRootsData = null;
+ function getDefaultRootsData() {
+-    if (DEFAULT_ROOTS_FILE_PATH) {
+-        if (defaultRootsData === null) {
+-            defaultRootsData = fs.readFileSync(DEFAULT_ROOTS_FILE_PATH);
+-        }
+-        return defaultRootsData;
+-    }
+     return null;
+ }
+ exports.getDefaultRootsData = getDefaultRootsData;
+-//# sourceMappingURL=tls-helpers.js.map
+\ No newline at end of file
++//# sourceMappingURL=tls-helpers.js.map
+-- 
+2.28.0
+
