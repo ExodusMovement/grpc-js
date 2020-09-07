@@ -271,7 +271,7 @@ class Http2ServerCallStream extends events_1.EventEmitter {
             let totalLength = 0;
 
             let errored = false
-            const sizeLimitCheck() => {
+            const sizeLimitCheck = () => {
                 if (errored) return true
                 if (this.maxReceiveMessageSize !== -1 && totalLength > this.maxReceiveMessageSize) {
                     this.sendError({
