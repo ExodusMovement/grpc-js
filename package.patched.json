@@ -1,6 +1,6 @@
 {
   "name": "@exodus/grpc-js",
-  "version": "1.1.3-exodus.3",
+  "version": "1.1.3-exodus.4",
   "description": "gRPC Library for Node - pure JS implementation",
   "homepage": "https://grpc.io/",
   "repository": "https://github.com/ExodusMovement/grpc-js",
@@ -19,10 +19,7 @@
     }
   ],
   "dependencies": {
-    "semver": "^6.2.0"
+    "semver": "^5.5.1"
   },
-  "files": [
-    "build/src/*.js",
-    "LICENSE"
-  ]
+  "files": ["build/src/*.js", "LICENSE"]
 }
