@@ -41,4 +41,3 @@ function setup() {
     resolver_1.registerResolver('unix', UdsResolver);
 }
 exports.setup = setup;
-//# sourceMappingURL=resolver-uds.js.map

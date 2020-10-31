@@ -114,4 +114,3 @@ const load_balancer = require("./load-balancer");
     resolver.registerAll();
     load_balancer.registerAll();
 })();
-//# sourceMappingURL=index.js.map

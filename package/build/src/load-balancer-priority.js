@@ -361,4 +361,3 @@ function setup() {
     load_balancer_1.registerLoadBalancerType(TYPE_NAME, PriorityLoadBalancer);
 }
 exports.setup = setup;
-//# sourceMappingURL=load-balancer-priority.js.map

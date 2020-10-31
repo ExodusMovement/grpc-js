@@ -78,4 +78,3 @@ class MaxMessageSizeFilterFactory {
     }
 }
 exports.MaxMessageSizeFilterFactory = MaxMessageSizeFilterFactory;
-//# sourceMappingURL=max-message-size-filter.js.map

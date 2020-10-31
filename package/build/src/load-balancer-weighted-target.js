@@ -283,4 +283,3 @@ function setup() {
     load_balancer_1.registerLoadBalancerType(TYPE_NAME, WeightedTargetLoadBalancer);
 }
 exports.setup = setup;
-//# sourceMappingURL=load-balancer-weighted-target.js.map

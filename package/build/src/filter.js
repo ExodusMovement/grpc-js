@@ -35,4 +35,3 @@ class BaseFilter {
     }
 }
 exports.BaseFilter = BaseFilter;
-//# sourceMappingURL=filter.js.map

@@ -454,4 +454,3 @@ function handleBidiStreaming(call, handler, metadata) {
     }
     handler.func(stream);
 }
-//# sourceMappingURL=server.js.map

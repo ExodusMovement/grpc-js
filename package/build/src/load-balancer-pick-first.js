@@ -341,4 +341,3 @@ function setup() {
     load_balancer_1.registerLoadBalancerType(TYPE_NAME, PickFirstLoadBalancer);
 }
 exports.setup = setup;
-//# sourceMappingURL=load-balancer-pick-first.js.map

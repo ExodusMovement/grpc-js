@@ -115,4 +115,3 @@ function validateConfig(obj) {
     throw new Error('No recognized load balancing policy configured');
 }
 exports.validateConfig = validateConfig;
-//# sourceMappingURL=load-balancing-config.js.map

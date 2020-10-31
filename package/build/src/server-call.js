@@ -495,4 +495,3 @@ function handleExpiredDeadline(call) {
     call.cancelled = true;
     call.emit('cancelled', 'deadline');
 }
-//# sourceMappingURL=server-call.js.map

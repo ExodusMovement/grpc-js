@@ -182,4 +182,3 @@ function createGoogleDefaultCredentials() {
     return sslCreds.compose(googleAuthCreds);
 }
 exports.createGoogleDefaultCredentials = createGoogleDefaultCredentials;
-//# sourceMappingURL=channel-credentials.js.map

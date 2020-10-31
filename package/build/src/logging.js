@@ -60,4 +60,3 @@ function trace(severity, tracer, text) {
     }
 }
 exports.trace = trace;
-//# sourceMappingURL=logging.js.map

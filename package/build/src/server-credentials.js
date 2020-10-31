@@ -78,4 +78,3 @@ class SecureServerCredentials extends ServerCredentials {
         return this.options;
     }
 }
-//# sourceMappingURL=server-credentials.js.map
