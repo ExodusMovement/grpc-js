@@ -126,4 +126,3 @@ function loadPackageDefinition(packageDef) {
     return result;
 }
 exports.loadPackageDefinition = loadPackageDefinition;
-//# sourceMappingURL=make-client.js.map

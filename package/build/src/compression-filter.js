@@ -198,4 +198,3 @@ class CompressionFilterFactory {
     }
 }
 exports.CompressionFilterFactory = CompressionFilterFactory;
-//# sourceMappingURL=compression-filter.js.map

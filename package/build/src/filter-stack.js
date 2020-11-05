@@ -67,4 +67,3 @@ class FilterStackFactory {
     }
 }
 exports.FilterStackFactory = FilterStackFactory;
-//# sourceMappingURL=filter-stack.js.map

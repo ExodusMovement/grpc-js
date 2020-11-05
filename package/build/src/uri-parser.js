@@ -108,4 +108,3 @@ function uriToString(uri) {
     return result;
 }
 exports.uriToString = uriToString;
-//# sourceMappingURL=uri-parser.js.map

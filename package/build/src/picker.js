@@ -83,4 +83,3 @@ class QueuePicker {
     }
 }
 exports.QueuePicker = QueuePicker;
-//# sourceMappingURL=picker.js.map

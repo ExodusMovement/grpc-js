@@ -59,4 +59,3 @@ var Propagate;
 exports.DEFAULT_MAX_SEND_MESSAGE_LENGTH = -1;
 // 4 MB default
 exports.DEFAULT_MAX_RECEIVE_MESSAGE_LENGTH = 4 * 1024 * 1024;
-//# sourceMappingURL=constants.js.map

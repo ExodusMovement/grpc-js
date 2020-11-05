@@ -224,4 +224,3 @@ function setup() {
     resolver_1.registerDefaultScheme('dns');
 }
 exports.setup = setup;
-//# sourceMappingURL=resolver-dns.js.map

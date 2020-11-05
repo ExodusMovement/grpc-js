@@ -329,4 +329,3 @@ class ChannelImplementation {
     }
 }
 exports.ChannelImplementation = ChannelImplementation;
-//# sourceMappingURL=channel.js.map

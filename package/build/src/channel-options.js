@@ -54,4 +54,3 @@ function channelOptionsEqual(options1, options2) {
     return true;
 }
 exports.channelOptionsEqual = channelOptionsEqual;
-//# sourceMappingURL=channel-options.js.map

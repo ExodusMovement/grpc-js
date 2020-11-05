@@ -92,4 +92,3 @@ function registerAll() {
     resolver_uds.setup();
 }
 exports.registerAll = registerAll;
-//# sourceMappingURL=resolver.js.map
