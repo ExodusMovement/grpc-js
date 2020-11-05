@@ -24,8 +24,3 @@ if grep -qrE "google-auth-library" package; then
   echo "Error: google-auth-library still present"
   exit -1
 fi
-
-if grep -qrE "sourceMappingURL" package; then
-  echo "Error: sourceMappingURL still present"
-  exit -1
-fi
