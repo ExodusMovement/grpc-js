@@ -177,7 +177,6 @@ class ComposedChannelCredentialsImpl extends ChannelCredentials {
 }
 function createGoogleDefaultCredentials() {
     throw new Error('unimplemented');
-      
     const sslCreds = ChannelCredentials.createSsl();
     const googleAuthCreds = call_credentials_1.CallCredentials.createFromGoogleCredential(new GoogleAuth());
     return sslCreds.compose(googleAuthCreds);

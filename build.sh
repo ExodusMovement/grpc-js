@@ -12,7 +12,7 @@ find package -name "*.ts" -delete
 find package -name "*.map" -delete
 
 rm -rf package/build/src/{events,load-balancer-eds,object-stream,xds-client,xds-bootstrap}.js
-replace "const GoogleAuth = require('google-auth-library')" "throw new Error('unimplemented');" "  .GoogleAuth;" "" -- package/build/src/channel-credentials.js
+node build.replace.js
 
 cd package && find ../patches -type f | sort | xargs -n1 patch -p 1 -i && cd -
 
